@@ -121,5 +121,10 @@
       }
     }
   },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  },
   "defaultProject": "gregslist-client"
 }
