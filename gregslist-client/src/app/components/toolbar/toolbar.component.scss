@@ -1,3 +1,8 @@
 .toolbar-spacer {
   flex: 1 1 auto;
 }
+
+.toolbar-top {
+  position: relative;
+  z-index: 100;
+}

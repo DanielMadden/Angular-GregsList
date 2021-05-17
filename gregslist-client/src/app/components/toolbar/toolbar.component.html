@@ -1,8 +1,8 @@
-<mat-toolbar color="primary" class="mat-elevation-z6">
-  <button mat-button>
+<mat-toolbar color="primary" class="mat-elevation-z6 toolbar-top">
+  <button mat-button routerLink="/">
     <h1>Gregslist</h1>
   </button>
-  <button mat-button>
+  <button mat-button routerLink="/cars">
     <span>Cars</span>
   </button>
   <button mat-button>
@@ -15,7 +15,17 @@
   <button mat-icon-button class="toolbar-icon" aria-label="Add listing">
     <mat-icon> remove_red_eye</mat-icon>
   </button>
-  <button mat-icon-button class="toolbar-icon" aria-label="Add listing">
+  <button
+    mat-icon-button
+    class="toolbar-icon"
+    aria-label="Add listing"
+    [matMenuTriggerFor]="menu"
+  >
     <mat-icon>library_add</mat-icon>
   </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="openForm('car')">Car</button>
+    <button mat-menu-item (click)="openForm('house')">House</button>
+    <button mat-menu-item (click)="openForm('job')">Job</button>
+  </mat-menu>
 </mat-toolbar>

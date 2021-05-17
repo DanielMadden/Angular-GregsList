@@ -6,6 +6,7 @@ const Job = new mongoose.Schema(
     company: { type: String, required: true },
     title: { type: String, required: true },
     imgUrl: { type: String, required: true },
+    description: { type: String, default: "No description" },
   },
   { timestamps: true, toJSON: { virtuals: true } }
 );

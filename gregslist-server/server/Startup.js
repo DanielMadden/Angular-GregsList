@@ -8,13 +8,13 @@ import { logger } from "./utils/Logger";
 export default class Startup {
   static ConfigureGlobalMiddleware(app) {
     // NOTE Configure and Register Middleware
-    let whitelist = ["http://localhost:8080"];
+    let whitelist = ["http://localhost:8080", "http://localhost:4200"];
     let corsOptions = {
-      origin: function(origin, callback) {
+      origin: function (origin, callback) {
         let originIsWhitelisted = whitelist.indexOf(origin) !== -1;
         callback(null, originIsWhitelisted);
       },
-      credentials: true
+      credentials: true,
     };
     app.use(helmet());
     app.use(cors(corsOptions));

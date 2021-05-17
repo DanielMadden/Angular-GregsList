@@ -1,0 +1,36 @@
+<h2 mat-dialog-title>Add Car</h2>
+<mat-dialog-content class="mat-typography">
+  <form [formGroup]="form" class="flex flex-col">
+    <mat-form-field appearance="legacy">
+      <mat-label>Make</mat-label>
+      <input matInput placeholder="" formControlName="make" type="text" />
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Model</mat-label>
+      <input matInput placeholder="" formControlName="model" type="text" />
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Year</mat-label>
+      <input matInput placeholder="" formControlName="year" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Price</mat-label>
+      <input matInput placeholder="" formControlName="price" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="legacy">
+      <mat-label>Image URL</mat-label>
+      <input matInput placeholder="" formControlName="imgUrl" type="text" />
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button
+    mat-button
+    [mat-dialog-close]="true"
+    cdkFocusInitial
+    (click)="submitForm()"
+  >
+    Post
+  </button>
+</mat-dialog-actions>

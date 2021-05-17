@@ -7,6 +7,7 @@ const Car = new mongoose.Schema(
     year: { type: Number, required: true },
     price: { type: Number, required: true },
     imgUrl: { type: String, required: true },
+    description: { type: String, default: "No description" },
   },
   { timestamps: true, toJSON: { vrituals: true } }
 );
