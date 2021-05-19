@@ -1,3 +1,18 @@
-{{ car | json }}
-
-<button mat-raised-button color="primary" (click)="deleteCar()">Delete</button>
+<div class="page grid grid-cols-2">
+  <!-- {{ car | json }} -->
+  <div class="p-10 flex justify-center items-center">
+    <img
+      [src]="car.imgUrl"
+      class="car-image mb-5 rounded-md mat-elevation-z10"
+    />
+  </div>
+  <div class="p-10 flex justify-center flex-col text-5xl">
+    <div class="mb-10">Make: {{ car.make }}</div>
+    <div class="mb-10">Model: {{ car.model }}</div>
+    <div class="mb-10">Year: {{ car.year }}</div>
+    <div class="mb-10">Price: ${{ car.price }}</div>
+    <button mat-raised-button color="primary" (click)="deleteCar()">
+      Delete
+    </button>
+  </div>
+</div>
